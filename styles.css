@@ -1,0 +1,297 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da Página */
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(248, 245, 245);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, rgb(32, 32, 58),blue);
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* Logotipo */
+.logo img {
+    max-height: 80px;
+    width: auto;
+}
+
+/* Informações Principais (Título e Descrição) */
+.info-header {
+    flex: 1;
+    text-align: center;
+}
+
+.info-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.info-header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase; /* Isso força as letras a ficarem em maiúsculas */
+    letter-spacing: 0.05em; /* Espaçamento entre as letras */
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.1em; /* Espaçamento entre as letras */
+}
+
+/* Conteúdo Principal */
+main {
+    margin-top: 30px;
+}
+
+/* Seção: Lista de Tarefas */
+#lista-tarefas {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+#lista-tarefas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#tarefas {
+    list-style: none;
+}
+
+#tarefas li {
+    background-color: whitesmoke;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+}
+
+#tarefas li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#tarefas li h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+#tarefas li p {
+    font-size: 1rem;
+}
+
+/* Seção: buscar tarefas pelo Id*/
+#buscar-tarefa {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+
+#form-buscar-tarefa {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#form-buscar-tarefa input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#form-buscar-tarefa button {
+    background: rgb(17, 17, 117);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    
+}
+
+#form-buscar-tarefa button:hover {
+    background: rgb(46, 46, 82);
+}
+
+#tarefas-filtradas {
+    list-style: none;
+    padding: 0;
+}
+
+#tarefas-filtradas li {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tarefas-filtradas li span {
+    font-size: 1rem;
+    color: #333;
+}
+
+#tarefas-filtradas li button {
+    background: rgb(44, 44, 122);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+
+}
+
+#tarefas-filtradas li button:hover {
+    background: blue;
+}
+
+
+/* Seção: Adicionar Nova Tarefa */
+#adicionar-tarefa {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#adicionar-tarefa h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#adicionar-tarefa input, 
+#adicionar-tarefa textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(212, 210, 210);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+#adicionar-tarefa input:focus, 
+#adicionar-tarefa textarea:focus {
+    border-color: rgb(32, 32, 58);
+    outline: none;
+}
+
+#adicionar-tarefa label {
+    font-size: 1rem;
+    margin-right: 8px;
+}
+
+#adicionar-tarefa input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#adicionar-tarefa button {
+    background-color: rgb(28, 28, 126);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#adicionar-tarefa button:hover {
+    background-color: rgb(32, 32, 58);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color:rgb(32, 32, 58);
+    color: white;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .info-header {
+        margin: 15px 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    nav ul li a {
+        font-size: 1rem;
+    }
+    
+    #lista-tarefas h2, 
+    #adicionar-tarefa h2 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="images.jpg" alt="Logotipo do Gerenciador de Tarefas">
+        <h2>GT</h2>
+      </div>
+      <div class="info-header">
+        <h1>Gerenciador de Tarefas</h1>
+        <p>Organize suas tarefas de forma eficiente</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#lista-tarefas">Minhas Tarefas</a></li>
+          <li><a href="#adicionar-tarefa">Adicionar Nova Tarefa</a></li>
+          <li><a href="#buscar-tarefa">Buscar Tarefa por ID</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <section id="adicionar-tarefa">
+      <h2>Adicionar Nova Tarefa</h2>
+      <form id="form-adicionar-tarefa">
+        <input type="text" id="titulo-tarefa" placeholder="Título da Tarefa" required>
+        <input type="text" id="descricao-tarefa" placeholder="Descrição da Tarefa">
+        <input type="number" id="id-usuario" placeholder="ID do Usuário" required>
+        <label for="status-tarefa">Tarefa Completada?</label>
+        <input type="checkbox" id="status-tarefa">
+        <button type="submit">Adicionar Tarefa</button>
+      </form>
+    </section>
+    
+    <section id="buscar-tarefa">
+      <h2>Buscar Tarefa por ID do Usuário</h2>
+      <form id="form-buscar-tarefa">
+        <input type="number" id="buscar-id-usuario" placeholder="ID do Usuário" required>
+        <button type="submit">Buscar</button>
+      </form>
+      <ul id="tarefas-filtradas"></ul>
+    </section>
+
+    <section id="lista-tarefas">
+      <h2>Minhas Tarefas</h2>
+      <ul id="tarefas"></ul>
+    </section>
+  
+    
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Gerenciador de Tarefas - Todos os direitos reservados</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
